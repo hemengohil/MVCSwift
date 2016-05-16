@@ -31,7 +31,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let dicData2 : NSMutableDictionary = [kUserId:"1", kUserName:"Sky Walker", kUserAddress:"201-A", kUserProfilePicURL:"http://soviet-off.com/data/out/1/IMG_367575.jpg"]
         itemsNormal.addObject(dicData2)
 
-        
         for dicData in itemsNormal {
             let objUser = User(data: dicData as! NSDictionary)
             items .addObject(objUser)
@@ -42,6 +41,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             dispatch_async(dispatch_get_main_queue()) {
             }
         }
+        
+        
+        
+
+//        // API Call
+//        let dicToSend:NSDictionary = [
+//            "username" : "hemengohil"
+//            ,"password" : "test123"]
+//        
+//        WebManager.postDataToURL("login", params: dicToSend, message: "") { (response) in
+//            print("Dic Response : \(response)")
+//        }
+
     }
     
     override func didReceiveMemoryWarning() {
